@@ -1,0 +1,70 @@
+@import 'consts.scss';
+
+@mixin text-h1 {
+  font-family: $font-next-art;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 1px;
+  @media (width <= 768px) {
+    font-size: 38px;
+  }
+  @media (width <= 576px) {
+    font-size: 28px;
+    letter-spacing: unset;
+  }
+}
+
+@mixin text-h2 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 120%;
+  @media (width <= 576px) {
+    font-size: 24px;
+  }
+}
+
+@mixin text-h2-mini {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 120%;
+  @media (width <= 576px) {
+    font-size: 24px;
+  }
+}
+
+
+
+@mixin text-h2-subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20px;
+  @media (width <= 576px) {
+    font-size: 16px;
+  }
+}
+
+
+@mixin text-h2-subtitle-mini {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  @media (width <= 576px) {
+    font-size: 16px;
+  }
+}
+
+@mixin text-regular {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  @media (width <= 576px) {
+    font-size: 16px;
+  }
+}
+
+@mixin text-regular-small {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}

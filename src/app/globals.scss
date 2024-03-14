@@ -1,0 +1,41 @@
+html,
+body {
+  height: 100%;
+}
+
+@mixin global-flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  @include global-flex-column;
+}
+
+main {
+  width: 100%;
+  flex-grow: 1;
+  @include global-flex-column;
+}
+
+.section_standart {
+  width: 100%;
+  @include global-flex-column;
+  box-sizing: border-box;
+  padding: 80px 16px 100px;
+}
+
+.section__container {
+  transition: all 1s;
+  transform: none;
+  max-width: 1180px;
+  width: 100%;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.section__container_hidden {
+  transform: translateY(50%);
+  opacity: 0;
+}

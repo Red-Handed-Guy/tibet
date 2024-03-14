@@ -1,0 +1,33 @@
+@import '../../styles/consts.scss';
+
+.button {
+  padding: 0 36px;
+  border-radius: 4px;
+  background-color: $color-background-green;
+  color: $color-font-light-gray;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0.192px;
+  white-space: nowrap;
+  max-height: 52px;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid $color-background-green;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $color-font-light-gray;
+    color: $color-background-green;
+  }
+}
+
+.button_color_invert {
+  border: 1px solid $color-font-light-gray;
+  background-color: $color-font-light-gray;
+  color: $color-background-green;
+  &:hover {
+    background-color: $color-background-green;
+    color: $color-font-light-gray;
+  }
+}
