@@ -1,15 +1,21 @@
-import { FC } from 'react'
+import { FC, MouseEventHandler } from 'react'
 import styles from './button.module.scss'
 
 interface IButton {
   text: string
+  type: 'button_big' | 'button_big_adaptive' | 'button_small'
   isColorInvert?: boolean
 }
 
-const Button: FC<IButton> = ({ text, isColorInvert }) => {
+const Button: FC<IButton> = ({ text, isColorInvert, type }) => {
+  const handleClick: MouseEventHandler<HTMLButtonElement> = e => {
+    e.preventDefault()
+  }
+
   return (
     <button
-      className={`${styles.button} ${isColorInvert ? styles.button_color_invert : ''}`}
+      onClick={handleClick}
+      className={`${styles[type]} ${isColorInvert ? styles.button_color_invert : ''}`}
     >
       {text}
     </button>

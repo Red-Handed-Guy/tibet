@@ -4,7 +4,8 @@ import TitleSubtitle from '../title-subtitle/title-subtitle'
 import styles from './section-about.module.scss'
 import Image from 'next/image'
 import useObserver from '@/src/hooks/useObserver'
-import JpegHouse from '@/src/images/about/house.jpeg'
+import JpegHouse from '@images/about/house.jpeg'
+import JpegMountain from '@images/about/fdf3f394b178d6bba7e11865e90f42cf.jpeg'
 import SvgPlay from '@images/play.svg'
 import VideoPlayer from '../youtube/youtube'
 import { YouTubePlayer } from 'react-youtube'
@@ -32,37 +33,50 @@ const SectionAbout: FC = () => {
   }
 
   return (
-    <section className={`section_standart`}>
+    <section ref={contentRef} className={`section_standart`}>
       <div
-        ref={contentRef}
         className={`section__container ${!isVisible && 'section__container_hidden'} ${styles.container}`}
       >
-        <div className={styles.video}>
-          <VideoPlayer
-            setIsVideoPlay={setIsVideoPlay}
-            playerRef={playerRef}
-            setIsVideoReady={setIsVideoReady}
-          />
-          {!isVideoPlay && (
-            <div className={styles.image_prewiew_wraper}>
-              <Image
-                src={JpegHouse}
-                alt={'Дом'}
-                placeholder="blur"
-                fill
-                style={{ objectFit: 'cover', zIndex: 2, width: '100%' }}
-                quality={100}
-              />
-              {isVideoReady && (
-                <button
-                  onClick={handlePlay}
-                  className={styles.image_prewiew_button}
-                >
-                  <SvgPlay />
-                </button>
-              )}
-            </div>
-          )}
+        <div className={styles.image_container}>
+          <div className={styles.back_image_wrapper}>
+            <Image
+              src={JpegMountain}
+              alt={'Гора'}
+              placeholder="blur"
+              width={350}
+              height={400}
+              style={{ objectFit: 'cover', zIndex: 2, width: '100%' }}
+              quality={100}
+            />
+          </div>
+          <div className={styles.video}>
+            <VideoPlayer
+              setIsVideoPlay={setIsVideoPlay}
+              playerRef={playerRef}
+              setIsVideoReady={setIsVideoReady}
+            />
+            {!isVideoPlay && (
+              <div className={styles.image_prewiew_wraper}>
+                <Image
+                  src={JpegHouse}
+                  alt={'Дом'}
+                  placeholder="blur"
+                  fill
+                  sizes="100vw"
+                  style={{ objectFit: 'cover', zIndex: 3, width: '100%' }}
+                  quality={100}
+                />
+                {isVideoReady && (
+                  <button
+                    onClick={handlePlay}
+                    className={styles.image_prewiew_button}
+                  >
+                    <SvgPlay />
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
         </div>
         <div className={styles.text_wrapper}>
           <TitleSubtitle
@@ -77,8 +91,8 @@ const SectionAbout: FC = () => {
             самых странных слов в Lorem Ipsum, &quot;consectetur&quot; и занялся
             его поисками в классической латинской литературе.
           </p>
-          <div>
-            <Button text="Программа тура" />
+          <div className={styles.button_wrapper}>
+            <Button text="Программа тура" type="button_big_adaptive" />
           </div>
         </div>
       </div>

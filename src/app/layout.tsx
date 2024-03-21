@@ -3,6 +3,7 @@ import '../vendor/reset.css'
 import './globals.scss'
 import { Nunito_Sans } from 'next/font/google'
 import { nextArt } from '../vendor/fonts/fonts'
+import Header from '../components/header/header'
 
 const nunitoSans = Nunito_Sans({ subsets: ['latin'] })
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={`${nunitoSans.className} ${nextArt.variable}`}>
+        <Header />
         {children}
       </body>
     </html>

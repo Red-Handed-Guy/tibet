@@ -18,6 +18,7 @@ const SectionMain = () => {
         placeholder="blur"
         quality={100}
         fill
+        sizes="100vw"
         style={{ objectFit: 'cover', zIndex: 2 }}
       />
     </section>

@@ -9,7 +9,8 @@ const MainInputMenu = () => {
       <OptionsInput label="выберите из списка" placeholder="Локация для тура" />
       <DateInput label="укажите диапазон" />
       <OptionsInput label="минимум 4 человека" placeholder="Участники" />
-      <Button text="Найти программу" isColorInvert={true} />
+
+      <Button text="Найти программу" isColorInvert={true} type="button_big" />
     </form>
   )
 }

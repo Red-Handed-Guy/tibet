@@ -8,20 +8,24 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  padding: 80px 16px 80px;
+  padding: 0px 16px 80px;
 }
 
 .container {
-  padding-top: 470px;
+  padding-top: 550px;
   position: relative;
   z-index: 3;
   display: flex;
   flex-direction: column;
   gap: 41px;
+  @media (width <= 768px) {
+    padding-top: 300px;
+    
+  }
 }
 
 .title {
-  @include text-h1;
+  @include text-h1-50-700;
   max-width: 1080px;
   width: 100%;
   align-self: flex-start;

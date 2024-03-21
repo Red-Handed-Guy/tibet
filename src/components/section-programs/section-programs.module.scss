@@ -1,0 +1,82 @@
+@import '../../styles/mixins.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  @media (width < 768px) {
+    justify-content: center;
+  }
+}
+
+.text_wrapper {
+  max-width: 580px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  @media (width <= 1023px) {
+    flex-grow: 3;
+  }
+}
+
+.text {
+  @include text-regular-18-400;
+}
+
+.shields_wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.image_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  max-width: 510px;
+  width: 100%;
+  justify-content: center;
+  @media (width <= 1023px) {
+    width: unset;
+    grid-template-columns: 150px;
+    flex-grow: 1;
+    max-width: unset;
+  }
+  @media (width < 768px) {
+    display: none;
+  }
+}
+
+.image_wrapper {
+  max-width: 250px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  @media (width <= 1023px) {
+    max-width: 150px;
+  }
+}
+
+.image_wrapper:nth-child(1) {
+  border-radius: 0px 50px;
+}
+.image_wrapper:nth-child(2) {
+  border-radius: 50px 0px;
+}
+.image_wrapper:nth-child(3) {
+  border-radius: 50px 0px;
+}
+.image_wrapper:nth-child(4) {
+  border-radius: 0px 50px;
+}
+
+.button_wrapper {
+  @media (width < 768px) {
+    display: flex;
+    justify-content: center;
+  }
+}

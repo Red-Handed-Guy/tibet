@@ -13,7 +13,9 @@
     "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
-    }
+      "jsx": true,
+      "useJSXTextNode": true
+    },
+    "project": "./tsconfig.json"
   }
 }

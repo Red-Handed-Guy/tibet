@@ -9,22 +9,21 @@
 }
 
 .title {
-  @include text-h2;
+  @include text-h1-32-800;
   color: $color-font-black;
 }
 
 .title_mini {
-  @include text-h2-mini;
+  @include text-h2-mini-26-800;
   color: $color-font-black;
 }
 
 .subtitle {
-  @include text-h2-subtitle;
+  @include text-h2-subtitle-24-400;
   color: $color-font-yellow;
-  
 }
 
 .subtitle_mini {
-  @include text-h2-subtitle-mini;
+  @include text-h2-subtitle-mini-18-400;
   color: $color-font-yellow;
 }

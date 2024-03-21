@@ -1,3 +1,5 @@
+@import "../styles/consts.scss";
+
 html,
 body {
   height: 100%;
@@ -11,6 +13,7 @@ body {
 
 body {
   @include global-flex-column;
+  position: relative;
 }
 
 main {
@@ -24,14 +27,22 @@ main {
   @include global-flex-column;
   box-sizing: border-box;
   padding: 80px 16px 100px;
+  transition: all 0.3s;
+  overflow: hidden;
+  @media (width < 768px) {
+    padding: 50px 16px;
+  }
+}
+
+.section_standart_color_gray {
+  background-color: $color-background-light-gray;
 }
 
 .section__container {
   transition: all 1s;
-  transform: none;
+  transform: translateY(0);
   max-width: 1180px;
   width: 100%;
-  overflow: hidden;
   opacity: 1;
 }
 
