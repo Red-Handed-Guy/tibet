@@ -20,16 +20,13 @@
   @media (width <= 1023px) {
     flex-grow: 3;
   }
+  @media (width < 768px) {
+    gap: 32px;
+  }
 }
 
 .text {
   @include text-regular-18-400;
-}
-
-.shields_wrapper {
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
 }
 
 .image_container {

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import '../vendor/reset.css'
 import './globals.scss'
+import 'swiper/css'
 import { Nunito_Sans } from 'next/font/google'
 import { nextArt } from '../vendor/fonts/fonts'
 import Header from '../components/header/header'

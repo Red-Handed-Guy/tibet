@@ -1,7 +1,6 @@
 import { FC, SVGProps } from 'react'
 import styles from './card-popular-ways.module.scss'
-import Image from 'next/image'
-import LagoonJPEG from '@images/popular-ways/lagoon.jpeg'
+import Image, { StaticImageData } from 'next/image'
 import Button from '../button/button'
 import StarSVG from '@images/popular-ways/star.svg'
 
@@ -9,7 +8,8 @@ interface ICardPopularWays {
   rating: string
   title: string
   subtitle: string
-  backgroundImage: FC<SVGProps<SVGElement>>
+  price: number
+  backgroundImage: StaticImageData
 }
 
 const CardPopularWays: FC<ICardPopularWays> = ({
@@ -17,11 +17,12 @@ const CardPopularWays: FC<ICardPopularWays> = ({
   rating,
   subtitle,
   title,
+  price,
 }) => {
   return (
     <article className={styles.card_container}>
       <Image
-        src={LagoonJPEG}
+        src={backgroundImage}
         alt="lagoon"
         fill
         sizes="100vw"
@@ -30,10 +31,10 @@ const CardPopularWays: FC<ICardPopularWays> = ({
       <div className={styles.content}>
         <div className={styles.header}>
           <div className={styles.header_title_wrapper}>
-            <h3 className={styles.header_title}>Озеро возле гор</h3>
-            <p className={styles.header_subtitle}>романтическое приключение</p>
+            <h3 className={styles.header_title}>{title}</h3>
+            <p className={styles.header_subtitle}>{subtitle}</p>
           </div>
-          <p className={styles.header_pice}>{`price $`}</p>
+          <p className={styles.header_price}>{`${price} $`}</p>
         </div>
         <div className={styles.main}>
           <p className={styles.main_text}>
@@ -50,7 +51,7 @@ const CardPopularWays: FC<ICardPopularWays> = ({
       </div>
       <div className={styles.rating_wrapper}>
         <StarSVG />
-        <p className={styles.rating_text}>4.5</p>
+        <p className={styles.rating_text}>{rating}</p>
       </div>
     </article>
   )

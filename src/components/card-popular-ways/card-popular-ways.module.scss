@@ -4,6 +4,7 @@
 .card_container {
   aspect-ratio: 380/500;
   max-width: 380px;
+  min-width: 285px;
   width: 100%;
   overflow: hidden;
   border-radius: 32px;
@@ -11,6 +12,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  @media (width < 900px) {
+    aspect-ratio: 285/400;
+  }
 }
 
 .content {
@@ -27,10 +31,16 @@
   transition: all 1s;
   display: flex;
   flex-direction: column;
+  @media (width < 1150px) {
+    padding: 24px 24px 20px;
+    top: 80.5%;
+  }
 }
 .card_container:hover .content {
-  top: 0;
-  padding: 30px 32px 20px;
+  @media (width >= 1000px) {
+    top: 0;
+    padding: 30px 32px 20px;
+  }
 }
 
 .header {
@@ -39,26 +49,41 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 24px;
+  gap: 10px;
 }
 
 .header_title {
   @include text-h3-24-700;
   color: $color-font-light-gray;
+  white-space: nowrap;
+  @media (width < 1150px) {
+    font-size: 18px;
+  }
 }
 
 .header_subtitle {
   @include text-regular-mini-14-400;
   color: $color-font-light-gray;
+  white-space: nowrap;
+  @media (width < 1150px) {
+    display: none;
+  }
 }
 
-.header_pice {
+.header_price {
   color: $color-font-light-gray;
   font-size: 20px;
   font-weight: 700;
   line-height: 40px;
-  padding: 0 12px;
+  padding: 0 16px;
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.3);
+  white-space: nowrap;
+  @media (width < 1150px) {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0 12px;
+  }
 }
 
 .main {
@@ -67,11 +92,20 @@
   flex-grow: 1;
   justify-content: space-between;
   padding-top: 14px;
+  @media (width < 1150px) {
+    padding-top: 0;
+  }
+  @media (width < 1000px) {
+    display: none;
+  }
 }
 
 .main_text {
   @include text-regular-16-400;
   color: $color-font-light-gray;
+  @media (width < 1150px) {
+    font-size: 14px;
+  }
 }
 
 .rating_wrapper {
@@ -101,5 +135,7 @@
 }
 
 .card_container:hover .rating_wrapper {
-  opacity: 0;
+  @media (width >= 1000px) {
+    opacity: 0;
+  }
 }

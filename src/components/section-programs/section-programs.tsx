@@ -46,26 +46,24 @@ const SectionPrograms: FC = () => {
             то есть более двух тысячелетий назад. Ричард МакКлинток, профессор
             латыни из колледжа.
           </p>
-          <div className={styles.shields_wrapper}>
-            <ShieldText
-              ShieldSvg={SvgPeople}
-              title="Опытный гид"
-              subtitle="Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации."
-              backgroundColor="#E5EEEB"
-            />
-            <ShieldText
-              ShieldSvg={SvgShield}
-              title="Безопасный поход"
-              subtitle="Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации."
-              backgroundColor="#E3E6EE"
-            />
-            <ShieldText
-              ShieldSvg={SvgPrice}
-              title="Лояльные цены"
-              subtitle="Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации."
-              backgroundColor="#F3F1E1"
-            />
-          </div>
+          <ShieldText
+            ShieldSvg={SvgPeople}
+            title="Опытный гид"
+            subtitle="Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации."
+            backgroundColor="#E5EEEB"
+          />
+          <ShieldText
+            ShieldSvg={SvgShield}
+            title="Безопасный поход"
+            subtitle="Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации."
+            backgroundColor="#E3E6EE"
+          />
+          <ShieldText
+            ShieldSvg={SvgPrice}
+            title="Лояльные цены"
+            subtitle="Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации."
+            backgroundColor="#F3F1E1"
+          />
           <div className={styles.button_wrapper}>
             <Button text="Стоимость программ" type="button_big_adaptive" />
           </div>
@@ -79,7 +77,7 @@ const SectionPrograms: FC = () => {
                 src={image}
                 alt={index + ''}
                 fill
-                sizes="100vw"
+                sizes="(max-width: 767px) 0vw, 33vw"
                 style={{
                   objectFit: 'cover',
                   objectPosition: 'center',

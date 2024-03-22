@@ -15,7 +15,7 @@ const TitleSubtitle: FC<ITitleSubtitle> = ({
   mini,
 }) => {
   return (
-    <div className={styles.container} style={{ alignItems: alignItems }}>
+    <div className={`${styles.container} ${styles[alignItems]}`}>
       <p className={mini ? styles.subtitle_mini : styles.subtitle}>
         {subtitle}
       </p>

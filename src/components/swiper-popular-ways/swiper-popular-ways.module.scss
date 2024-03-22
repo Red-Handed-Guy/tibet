@@ -1,0 +1,19 @@
+.swiper_wrapper {
+  width: 100%;
+  @media (width >= 950px) {
+    display: none;
+  }
+}
+
+.swiper_slide {
+  max-width: 285px;
+}
+
+.not_swiper_container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  @media (width < 950px) {
+    display: none;
+  }
+}
