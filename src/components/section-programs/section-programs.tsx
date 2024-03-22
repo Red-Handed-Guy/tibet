@@ -1,4 +1,4 @@
-import { FC, MouseEventHandler, useEffect, useRef, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import Button from '../button/button'
 import TitleSubtitle from '../title-subtitle/title-subtitle'
 import styles from './section-programs.module.scss'

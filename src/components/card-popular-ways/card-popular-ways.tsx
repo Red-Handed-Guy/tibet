@@ -1,4 +1,4 @@
-import { FC, SVGProps } from 'react'
+import { FC } from 'react'
 import styles from './card-popular-ways.module.scss'
 import Image, { StaticImageData } from 'next/image'
 import Button from '../button/button'

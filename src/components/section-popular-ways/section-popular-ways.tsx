@@ -1,12 +1,9 @@
 import { FC, useEffect, useRef, useState } from 'react'
 import useObserver from '@/src/hooks/useObserver'
 import TitleSubtitle from '../title-subtitle/title-subtitle'
-import CardPopularWays from '../card-popular-ways/card-popular-ways'
-import LagoonJPEG from '@images/popular-ways/lagoon.jpeg'
 import SwiperPopularWays from '../swiper-popular-ways/swiper-popular-ways'
 import styles from './section-popular-ways.module.scss'
 import Button from '../button/button'
-import useWindoWidth from '@/src/hooks/windowWidth'
 
 const SectionPopularWays: FC = () => {
   const [isVisible, setIsVisible] = useState(false)
