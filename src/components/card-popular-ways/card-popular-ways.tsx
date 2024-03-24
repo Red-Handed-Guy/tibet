@@ -1,31 +1,24 @@
 import { FC } from 'react'
 import styles from './card-popular-ways.module.scss'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import Button from '../button/button'
 import StarSVG from '@images/popular-ways/star.svg'
+import { IPopularWaysData } from '@/types'
 
 interface ICardPopularWays {
-  rating: string
-  title: string
-  subtitle: string
-  price: number
-  backgroundImage: StaticImageData
+  data: IPopularWaysData
 }
 
-const CardPopularWays: FC<ICardPopularWays> = ({
-  backgroundImage,
-  rating,
-  subtitle,
-  title,
-  price,
-}) => {
+const CardPopularWays: FC<ICardPopularWays> = ({ data }) => {
+  const { backgroundImage, rating, price, title, subtitle } = data
   return (
     <article className={styles.card_container}>
       <Image
         src={backgroundImage}
         alt="lagoon"
         fill
-        sizes="100vw"
+        placeholder="blur"
+        sizes="(max-width: 768px) 100vw, 50vw"
         style={{ objectFit: 'cover', width: '100%', zIndex: 1 }}
       />
       <div className={styles.content}>

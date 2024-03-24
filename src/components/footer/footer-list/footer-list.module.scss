@@ -1,0 +1,57 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/consts.scss';
+
+.container {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.title {
+  @include text-h3-20-700;
+  color: $color-font-light-gray;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.list_item {
+  display: flex;
+  gap: 8px;
+
+  align-self: flex-start;
+  @media (width >= 768px) {
+    &:hover .arrow {
+      fill: $color-font-yellow;
+    }
+    &:hover .link {
+      color: $color-font-yellow;
+      text-decoration: underline;
+    }
+  }
+}
+
+.arrow {
+  fill: $color-font-light-gray;
+  padding: 5px 0;
+}
+
+.link {
+  @include text-regular-mini-14-400;
+  color: $color-font-light-gray;
+  text-decoration: none;
+}
+
+.new {
+  @include text-regular-mini-14-400;
+  color: $color-font-green;
+  background-color: $color-font-light-gray;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 0 10px;
+  align-content: center;
+  max-height: 20px;
+}

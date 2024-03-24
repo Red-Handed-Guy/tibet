@@ -5,6 +5,7 @@ import 'swiper/css'
 import { Nunito_Sans } from 'next/font/google'
 import { nextArt } from '../vendor/fonts/fonts'
 import Header from '../components/header/header'
+import Footer from '../components/footer/footer'
 
 const nunitoSans = Nunito_Sans({ subsets: ['latin'] })
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${nunitoSans.className} ${nextArt.variable}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

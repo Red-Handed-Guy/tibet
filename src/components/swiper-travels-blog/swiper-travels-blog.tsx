@@ -1,11 +1,11 @@
 import { FC } from 'react'
-import styles from './swiper-popular-ways.module.scss'
+import styles from './swiper-travels-blog.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import CardPopularWays from '../card-popular-ways/card-popular-ways'
 import { Autoplay } from 'swiper/modules'
-import { popularWays } from '@/src/data/popular-ways'
+import CardTravelsBlog from '../card-travels-blog/card-travels-blog'
+import { travelsBlog } from '@/src/data/travels-blog'
 
-const SwiperPopularWays: FC = () => {
+const SwiperTravelsBlog: FC = () => {
   const parametr = {
     spaceBetween: 20,
     modules: [Autoplay],
@@ -16,20 +16,20 @@ const SwiperPopularWays: FC = () => {
     <>
       <div className={styles.swiper_wrapper}>
         <Swiper {...parametr} slidesPerView="auto" autoplay={{ delay: 5000 }}>
-          {popularWays.map(item => (
+          {travelsBlog.map(item => (
             <SwiperSlide className={styles.swiper_slide} key={item.title}>
-              <CardPopularWays data={item} />
+              <CardTravelsBlog data={item} />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
       <div className={styles.not_swiper_container}>
-        {popularWays.map(item => (
-          <CardPopularWays data={item} key={item.title} />
+        {travelsBlog.map(item => (
+          <CardTravelsBlog data={item} key={item.title} />
         ))}
       </div>
     </>
   )
 }
 
-export default SwiperPopularWays
+export default SwiperTravelsBlog

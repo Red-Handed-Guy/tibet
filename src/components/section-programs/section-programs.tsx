@@ -28,10 +28,7 @@ const SectionPrograms: FC = () => {
   }, [isVisibleObsrver])
 
   return (
-    <section
-      ref={contentRef}
-      className={`section_standart section_standart_color_gray`}
-    >
+    <section ref={contentRef} className={`section_standart`}>
       <div
         className={`section__container ${!isVisible && 'section__container_hidden'} ${styles.container}`}
       >

@@ -1,4 +1,4 @@
-@import "../styles/consts.scss";
+@import '../styles/consts.scss';
 
 html,
 body {
@@ -34,7 +34,7 @@ main {
   }
 }
 
-.section_standart_color_gray {
+.section_standart:nth-child(2n + 1) {
   background-color: $color-background-light-gray;
 }
 

@@ -48,6 +48,13 @@
   line-height: 120%;
 }
 
+@mixin text-h3-20-700 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
 @mixin text-h3-18-700 {
   font-size: 18px;
   font-weight: 700;
@@ -85,8 +92,8 @@
 }
 
 @mixin text-regular-16-400 {
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
 }

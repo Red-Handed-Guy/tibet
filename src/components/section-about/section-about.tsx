@@ -45,7 +45,13 @@ const SectionAbout: FC = () => {
               placeholder="blur"
               width={350}
               height={400}
-              style={{ objectFit: 'cover', zIndex: 2, width: '100%' }}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              style={{
+                objectFit: 'cover',
+                zIndex: 2,
+                width: '100%',
+                height: '100%',
+              }}
               quality={100}
             />
           </div>
@@ -60,10 +66,15 @@ const SectionAbout: FC = () => {
                 <Image
                   src={JpegHouse}
                   alt={'Дом'}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   placeholder="blur"
-                  fill
-                  sizes="100vw"
-                  style={{ objectFit: 'cover', zIndex: 3, width: '100%' }}
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                    zIndex: 3,
+                    width: '100%',
+                    height: '100%',
+                  }}
                   quality={100}
                 />
                 {isVideoReady && (

@@ -1,4 +1,4 @@
-import React, { FC, MutableRefObject, useEffect, useRef } from 'react'
+import React, { FC, MutableRefObject } from 'react'
 import YouTube, { YouTubePlayer, YouTubeProps } from 'react-youtube'
 
 interface IYoutube {

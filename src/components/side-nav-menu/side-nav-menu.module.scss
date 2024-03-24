@@ -5,18 +5,18 @@
   position: absolute;
   box-sizing: border-box;
   top: 0;
-  left: 0;
-  width: 0;
+  left: -100%;
+  width: 100%;
   height: 100vh;
   background-color: $color-background-green;
-  padding: 50px 0;
-  overflow: hidden;
+  padding: 50px 16px;
   transition: all 0.3s;
+  visibility: hidden;
 }
 
 .side_nav_opened {
-  width: 100%;
-  padding: 50px 16px;
+  visibility: visible;
+  left: 0;
 }
 
 .nav_list {
@@ -27,8 +27,18 @@
 
 .nav_item {
   display: flex;
+  align-self: flex-start;
   align-items: center;
   gap: 8px;
+  @media (width > 768px) {
+    &:hover .nav_link {
+      color: $color-font-yellow;
+      text-decoration: underline;
+    }
+    &:hover .nav_arrow {
+      fill: $color-font-yellow;
+    }
+  }
 }
 
 .nav_arrow {
@@ -40,14 +50,4 @@
   text-decoration: none;
   color: $color-font-light-gray;
   white-space: nowrap;
-}
-
-.nav_item:hover {
-  .nav_link {
-    color: $color-font-yellow;
-    text-decoration: underline;
-  }
-  .nav_arrow {
-    fill: $color-font-yellow;
-  }
 }

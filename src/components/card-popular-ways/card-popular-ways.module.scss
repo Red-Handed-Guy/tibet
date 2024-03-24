@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  @media (width < 900px) {
+  @media (width < 768px) {
     aspect-ratio: 285/400;
   }
 }
@@ -33,6 +33,10 @@
   flex-direction: column;
   @media (width < 1150px) {
     padding: 24px 24px 20px;
+    top: 84%;
+  }
+  @media (width < 768px) {
+    padding: 24px 24px 20px;
     top: 80.5%;
   }
 }
@@ -50,6 +54,9 @@
   justify-content: space-between;
   padding-bottom: 24px;
   gap: 10px;
+  @media (width < 1150px) {
+    padding-bottom: 36px;
+  }
 }
 
 .header_title {
@@ -92,6 +99,7 @@
   flex-grow: 1;
   justify-content: space-between;
   padding-top: 14px;
+  transition: opacity 0.3s;
   @media (width < 1150px) {
     padding-top: 0;
   }
