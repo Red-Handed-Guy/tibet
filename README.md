@@ -13,7 +13,7 @@
 
 Реализована верстка макета 1920px -> 390px на базе React + Next.js + TypeScript.
 
-Ссылка на результат работы - https://tibet.vercel.app/
+**[Ссылка на результат работы](https://tibet.vercel.app/)**
 
 Задеплоено с помощью **Versel**
 
