@@ -49,8 +49,10 @@ const Footer: FC = () => {
               </a>
             </div>
           </div>
-          <FooterList data={services} />
-          <FooterList data={important} />
+          <div className={styles.footer_lists}>
+            <FooterList data={services} />
+            <FooterList data={important} />
+          </div>
         </div>
       </div>
       <div className={styles.footer_copyright_wrapper}>

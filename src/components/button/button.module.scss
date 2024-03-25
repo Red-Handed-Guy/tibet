@@ -5,8 +5,8 @@
   background-color: $color-background-green;
   color: $color-font-light-gray;
   font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.192px;
+  font-weight: 600;
+  letter-spacing: -0.192px;
   white-space: nowrap;
   cursor: pointer;
   box-sizing: border-box;
@@ -22,14 +22,14 @@
 
 @mixin button_big {
   @include button;
-  padding: 0 36px;
+  padding: 0 33px;
   line-height: 50px;
   max-height: 52px;
 }
 
 .button_small {
   @include button;
-  padding: 0 24px;
+  padding: 0 22px;
   line-height: 42px;
   max-height: 44px;
 }

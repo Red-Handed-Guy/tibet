@@ -8,7 +8,7 @@ const SectionMain = () => {
     <section className={styles.section}>
       <div className={`section__container ${styles.container}`}>
         <h1 className={styles.title}>
-          Насладись прогулкой в горах с командой единомышленников
+          Насладись прогулкой в горах с&nbsp;командой единомышленников
         </h1>
         <MainInputMenu />
       </div>

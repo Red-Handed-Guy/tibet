@@ -14,7 +14,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   margin-top: 20px;
 }
 
@@ -46,10 +46,14 @@
 }
 
 .new {
-  @include text-regular-mini-14-400;
+  margin-left: 12px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: lowercase;
   color: $color-font-green;
   background-color: $color-font-light-gray;
-  font-weight: 700;
   border-radius: 4px;
   padding: 0 10px;
   align-content: center;

@@ -5,8 +5,8 @@
   font-size: 50px;
   font-weight: 700;
   line-height: 150%;
-  letter-spacing: 1px;
-  @media (width <= 768px) {
+  letter-spacing: 0.8px;
+  @media (width < 768px) {
     font-size: 38px;
   }
   @media (width <= 576px) {

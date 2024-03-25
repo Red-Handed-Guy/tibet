@@ -5,6 +5,9 @@
   display: flex;
   column-gap: 16px;
   align-items: center;
+  @media (width <= 576px) {
+    align-items: flex-start;
+  }
 }
 
 .svg_wrapper {
